@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "ay-qrcode": "/components/ay-qrcode/ay-qrcode"
+  }
+}
