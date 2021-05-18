@@ -1,0 +1,17 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/vaccina/vaccina",
+    "pages/map/map",
+    "pages/booking/booking",
+    "pages/booking/archives"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "新冠肺炎疫苗",
+    "navigationBarBackgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

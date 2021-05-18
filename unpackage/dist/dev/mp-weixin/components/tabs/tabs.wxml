@@ -1,0 +1,1 @@
+<view class="questionbar"><view class="content_items"><block wx:for="{{tabs}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view data-event-opts="{{[['tap',[['handlerActive',['$0'],[[['tabs','',item.index,'index']]]]]]]}}" class="{{['content_item',item.isActive?'active':'']}}" bindtap="__e">{{''+item.value+''}}</view></block></view><slot></slot></view>

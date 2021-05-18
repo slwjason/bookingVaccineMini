@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "新冠肺炎疫苗",
+  "usingComponents": {
+    "address-picker": "/components/lingdang-AddressPicker/AddressPicker",
+    "tab-details": "/components/tabs/tab_details"
+  }
+}
