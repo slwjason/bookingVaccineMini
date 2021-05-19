@@ -4,7 +4,14 @@
     "pages/vaccina/vaccina",
     "pages/map/map",
     "pages/booking/booking",
-    "pages/booking/archives"
+    "pages/booking/archives",
+    "pages/question/question",
+    "pages/question/question1",
+    "pages/question/question2",
+    "pages/question/question3",
+    "pages/question/question4",
+    "pages/question/question5",
+    "pages/question/question6"
   ],
   "subPackages": [],
   "window": {
@@ -12,6 +19,5 @@
     "navigationBarTitleText": "新冠肺炎疫苗",
     "navigationBarBackgroundColor": "#F8F8F8"
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }

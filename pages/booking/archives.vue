@@ -6,7 +6,7 @@
 					<input type="text" v-model="formData.name" class="uni-input-border" placeholder="请输入姓名" />
 				</uni-forms-item>
 				<uni-forms-item name="idCard" label="身份证号" >
-					<input type="text" v-model="formData.idCard" @onchange="goAgeSex" class="uni-input-border" placeholder="请输入身份证号" />
+					<input type="text" v-model="formData.idCard" @blur="goAgeSex" class="uni-input-border" placeholder="请输入身份证号" />
 				</uni-forms-item>
 				<!-- 使用原生input，需要绑定binddata -->
 				<uni-forms-item name="age"  label="年龄">
@@ -23,23 +23,30 @@
 				</uni-forms-item>
 			</uni-group>
 			<view>
-				<button  @click="submitForm('form')">校验表单</button>
-				<button  @click="resetForm">重置表单</button>
+				<button  @click="submitForm('form')" type="primary">提交</button>
+				<button  @click="resetForm" type="warn">重置</button>
 			</view>
 		</uni-forms>
+		
 	</view>
 </template>
  
 <script>
 	export default {
+		onLoad() {
+			this.getUserInfo()
+		},
 		data() {
 			return {
+				
 				formData: {
 					name: '',
 					age: '',
-					email: '',
 					sex: '',
-					idCard: ''
+					idCard: '',
+					openId:'',
+					phone:'',
+					address:''
 				},
 	
 				show: false,
@@ -77,19 +84,32 @@
 			}
 		},
 		methods: {
-			//
+			////获取微信用户信息
+			getUserInfo(){
+				let that = this
+				wx.getStorage({
+						key: 'opid_sessionKey',
+						success: function(res) {
+							console.log(res)
+						 that.formData.openId= res.data.openid
+						},
+						fail: function(res) {
+						}
+				 
+					  })
+				
+			},
 			goAgeSex(){
-			
 				//获取输入身份证号码
 				var UUserCard = this.formData.idCard;
 				//获取出生日期
 				UUserCard.substring(6, 10) + "-" + UUserCard.substring(10, 12) + "-" + UUserCard.substring(12, 14);
 				//获取性别
 				if (parseInt(UUserCard.substr(16, 1)) % 2 == 1) {
-				alert("男");
+				this.formData.sex='男'
 				//是男则执行代码 ...
 				} else {
-				alert("女");
+				this.formData.sex='女'
 				//是女则执行代码 ...
 				}
 				//获取年龄
@@ -100,22 +120,46 @@
 				if (UUserCard.substring(10, 12) < month || UUserCard.substring(10, 12) == month && UUserCard.substring(12, 14) <= day) {
 				age++;
 				}
-				alert(age);
+				this.formData.age = age
 				//年龄 age
 			},
 			change(name, value) {
 				this.formData.checked = value
 				this.$refs.form.setValue(name, value)
 			},
- 
+			//提交建档数据
+			async archives(res) {
+				const result = await this.$myRuquest({
+					url: '/users/createUser',
+					method:'POST',
+					data:{
+						name:res.name,
+						idCard:res.idCard,
+						age:res.age,
+						sex:res.sex,
+						phone:res.phone,
+						address:res.address,
+						wxId:res.openId,
+					},
+				})
+				
+			},
+			
 			submitForm(form) {
+				let that = this
 				this.$refs[form]
 					.submit()
 					.then(res => {
-						console.log('表单的值：', res)
 						uni.showToast({
 							title: '验证成功'
 						})
+						this.archives(that.formData)
+						//两秒后跳回预约页面
+						setTimeout(()=>{
+							 uni.navigateTo({
+							  url: '/pages/booking/booking',
+							})
+						},2000)
 					})
 					.catch(errors => {
 						console.error('验证失败：', errors)
@@ -128,12 +172,13 @@
 			},
 			validateField(form) {
 				this.$refs[form]
-					.validateField(['name', 'email'])
+					.validateField(['name'])
 					.then(res => {
 						uni.showToast({
 							title: '验证成功'
 						})
 						console.log('表单的值：', res)
+						
 					})
 					.catch(errors => {
 						console.error('验证失败：', errors)

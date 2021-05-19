@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App'
-import { myRequest } from './util/api.js'
+import { myRequest } from 'static/util/api.js'
 //分享
 import share from '@/static/js/share.js'
 Vue.mixin(share)

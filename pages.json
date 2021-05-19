@@ -21,7 +21,43 @@
 		{
 			"path": "pages/booking/archives"
 		
-		}
+		},
+		{
+		   "path": "pages/question/question",
+		   "style": { 
+		                }
+		  },
+		  {
+		   "path": "pages/question/question1",
+		   "style": { 
+		                }
+		  },
+		  {
+		   "path": "pages/question/question2",
+		   "style": { 
+		                }
+		  },
+		  {
+		   "path": "pages/question/question3",
+		   "style": { 
+		                }
+		  },
+		  {
+		   "path": "pages/question/question4",
+		   "style": { 
+		                }
+		  },
+		  {
+		   "path": "pages/question/question5",
+		   "style": { 
+		                }
+		  },
+		  {
+		   "path": "pages/question/question6",
+		   "style": { 
+		                }
+		  }
+		
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
