@@ -1,10 +1,14 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/index/content",
     "pages/vaccina/vaccina",
     "pages/map/map",
     "pages/booking/booking",
+    "pages/booking/unit",
     "pages/booking/archives",
+    "pages/booking/details",
+    "pages/booking/bookingSubmit",
     "pages/question/question",
     "pages/question/question1",
     "pages/question/question2",

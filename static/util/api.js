@@ -6,18 +6,19 @@ export const myRequest = (options)=>{
 			method: options.method || 'GET',
 			data: options.data || {},
 			success: (res)=>{
-				if(res.data.code !== 200) {
-					return uni.showToast({
-						title: '获取数据失败'
-					})
+				console.log(res.data.code)
+				if(res.data.code == 200) {
+					resolve(res)
+					
 				}
-				resolve(res)
+				
 			},
 			fail: (err)=>{
+				reject(err)
 				uni.showToast({
 					title: '请求接口失败'
 				})
-				reject(err)
+				
 			}
 		})
 	})

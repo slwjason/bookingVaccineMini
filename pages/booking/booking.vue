@@ -21,7 +21,7 @@
 				</view>
 			<view class="lists">
 				<text class="titile">成人档案列表</text>
-				<uni-card  v-for="item in archives" class="card">
+				<uni-card  v-for="item in archives" class="card"  @click="details(item.id)">
 					<view class="item_left">
 						<text class="name">{{item.name}}</text>
 						<text class='sex'>{{item.sex}}</text>
@@ -36,8 +36,6 @@
 			</view>
 		</view>
 	</view>
-	
-	
 </template>
 
 <script>
@@ -45,7 +43,6 @@
 	
 		data() {
 			return {
-				
 				archives:[],
 				openId:''
 				}
@@ -77,21 +74,31 @@
 					  })
 				
 			},
-			find(){
-				console.log(this.openId)
-			},
+		   details(id){
+			  uni.navigateTo({
+			    url: '/pages/booking/details?id='+id,
+			  })
+		  },
 		  async zizhu () {
-						uni.navigateTo({
-						  url: '/pages/booking/archives',
-						})
-					},
+			  if(this.archives.length<5){
+				  uni.navigateTo({
+				    url: '/pages/booking/archives',
+				  })
+			  }else{
+				  wx.showToast({
+				    title: '超过最大预约数咯',
+				    icon: 'error',
+				    duration: 2000
+				  })
+			  }
+					
+			},
 			//查找当前微信用户建档记录
 			//提交建档数据
 			async findArchives() {
-				let that = this
-				console.log(that.openId)
+				let that = this	
 				const result = await this.$myRuquest({
-					url: '/users/findArchives',
+					url: '/archives/findArchives',
 					method:'POST',
 					data:{
 						wxId:that.openId,

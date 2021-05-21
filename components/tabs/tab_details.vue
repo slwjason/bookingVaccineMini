@@ -108,17 +108,17 @@
 								</view>
 								<view class="item">
 									<view class="time">
-										<p>05.09 11:41</p>
+										<p>03.23 17:01</p>
 									</view>
 									<view class="news">
 										<view class="news_title">
-											中国疾控中心主任高福：中国明年或实现全民免疫
+											不用打针！这款吸入用新冠疫苗获批临床试验
 										</view>
 										<view class="news_msg">
-											5月9日，中科院院士、中国疾病预防控制中心主任高福通过视频接受日本知名智库、民间非营利组织言论NPO代表工藤泰志采访时表示，预计到明年，中国将有9-10亿人接种新冠疫苗，可达到实现全民免疫的标准。
+											记者3月23日获悉，康希诺生物在港交所发布公告称，其吸入用重组新型冠状病毒疫苗获得了国家药品监督管理局的药物临床试验批件。
 										</view>
 										<view class="news_from">
-											来源： 每日经济新闻
+											来源： 北京日报
 										</view>
 									</view>
 								</view>
@@ -197,7 +197,7 @@
 			},
 			//预约
 			booking(){
-				uni.redirectTo({
+				uni.navigateTo({
 				  url: '/pages/booking/booking',
 				})
 			},

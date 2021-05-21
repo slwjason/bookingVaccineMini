@@ -38,11 +38,11 @@
 					}
 					
 				}
+				
 				this.$forceUpdate()
 			},
 			// 地址控件改变控件
 			columnchange(e) {
-				
 				let aIndex = JSON.parse(JSON.stringify(e.detail.column+1));//第几组
 				let j = e.detail.value;//索引值
 				

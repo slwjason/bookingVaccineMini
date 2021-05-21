@@ -3,8 +3,13 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "新冠肺炎疫苗"
+				"navigationBarTitleText": "新冠肺炎疫苗",
+				"onReachBottomDistance":100
 			}
+		},
+		{
+			"path": "pages/index/content"
+			
 		},
 		{
 			"path": "pages/vaccina/vaccina"
@@ -19,7 +24,19 @@
 		
 		},
 		{
+			"path": "pages/booking/unit"
+		
+		},
+		{
 			"path": "pages/booking/archives"
+		
+		},
+		{
+			"path": "pages/booking/details"
+		
+		},
+		{
+			"path": "pages/booking/bookingSubmit"
 		
 		},
 		{
@@ -57,7 +74,6 @@
 		   "style": { 
 		                }
 		  }
-		
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

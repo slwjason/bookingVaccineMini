@@ -1,4 +1,7 @@
 
+page{
+	padding-bottom:100rpx ;
+}
 .uni-input-border {
 	padding: 0 10px;
 	height: 35px;
