@@ -1,3 +1,5 @@
 {
+  "navigationBarTitleText": "选择疫苗",
+  "onReachBottomDistance": 100,
   "usingComponents": {}
 }

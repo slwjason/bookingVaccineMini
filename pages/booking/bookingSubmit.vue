@@ -62,7 +62,7 @@
 					vaccineId:'',
 					current: null,
 					archivesId:'',//预约人，
-					vaccine:""
+					vaccine:''
 				}
 		},
 	
@@ -90,6 +90,7 @@
 			},
 			//监听疫苗单选框
 			 radioChange(evt) {
+				 console.log(evt.target)
 			            for (let i = 0; i < this.point.items.length; i++) {
 			                if (this.point.items[i].vaccine === evt.target.value) {
 								this.vaccine = evt.target.value
@@ -123,11 +124,23 @@
 					data:{
 						archives:that.archivesId,
 						hospital:that.point.hospital,
+						hospitalName:that.point.hospitalName,
 						point:that.point.point,
+						pointName:that.point.pointName,
 						vaccine:that.vaccine,
 					},
 				})
-				console.log(result)
+				if(result.data.code==200){
+					 uni.showToast({
+						title: '预约成功'
+					})
+					//两秒后跳回预约页面
+					setTimeout(()=>{
+						 uni.navigateTo({
+						  url: '/pages/booking/booking',
+						})
+					},1000)
+				}
 			},
 		},
 		
@@ -136,7 +149,9 @@
 </script>
 
 <style lang="scss">
-
+	page{
+		background-color: #F5F6FA;
+	}
 	.header{
 		background: #fff;
 		width: 100%;
@@ -169,6 +184,7 @@
 		background: #fff;
 		width: 100%;
 		padding: 10px;
+		height: 700rpx;
 		margin-top: 40rpx;
 	}
 	.main_header{
@@ -222,11 +238,11 @@
 		
 	.footer{
 		background: #fff;
-		height: 50rpx;
+		height:75rpx;
 		position: fixed;
 		bottom: 0;
 		width: 100%;
-		
+	
 	}
 	.btn{
 		margin: 0 auto;

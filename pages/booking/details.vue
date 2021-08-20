@@ -5,7 +5,7 @@
 				<view class="left">
 					<view class="left_top">
 						<text class="name">{{archives.name}}</text>
-						<text class="sex">{{archives.sex}}</text>
+						<text class="sex" :style="archives.sex === '男' ? boy : girl">{{archives.sex}}</text>
 						<text class="age">{{archives.age}}岁</text>
 					</view>
 					<view class="left_buttom">
@@ -33,8 +33,8 @@
 			
 		</uni-card>
 		<view class="footer">
-			<button  @click="submitForm('form')" type="primary"  style="display: inline; width: 466rpx;font-size: 14px;">查看预约记录</button>
-			<button  @click="booking(archives.id)"  style="display: inline; width: 254rpx; background-color: #007AFF;font-size: 14px;">我要预约</button>
+			<button @click="toRecord(archives.id)" type="primary"  style="display: inline; width: 466rpx;font-size: 14px;">查看预约记录</button>
+			<button  @click="booking(archives.id)"  style="display: inline; width: 254rpx; background-color: #007AFF;font-size: 14px; color: #fff;">我要预约</button>
 			</view>
 	</view>
 </template>
@@ -44,7 +44,9 @@
 		data() {
 			return {
 				id:'',
-				archives:{}
+				archives:{},
+				boy:'background-color:#aaaaff',
+				girl:'background-color:pink'
 			};
 		},
 		//获取页面传递的id
@@ -99,14 +101,19 @@
 				uni.navigateTo({
 				  url: '/pages/booking/unit?id='+id,
 				})
-			}
+			},
+			toRecord(id){
+			    uni.navigateTo({
+			      url: '/pages/record/record?id='+id
+			    })
+			   }
 		}
 	}
 </script>
 
 <style lang="scss">
 	page{
-		background: #C0C0C0;
+		background-color: #F5F6FA;
 	}
 	.header{
 		
@@ -138,7 +145,8 @@
 		width:40rpx;
 		text-align: center;
 		display: inline-block;
-		background: #007AFF;
+		
+		color: #00557f;
 		margin: 0px 10px;
 		font-size: 14px;
 	}
@@ -163,7 +171,7 @@
 		position: fixed;
 		bottom: 0px;
 		width: 100%;
-		height: 100rpx;
+		height: 75rpx;
 		background: #fff;
 		align-items: center;
 		justify-content: center;

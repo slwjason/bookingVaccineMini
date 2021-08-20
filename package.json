@@ -1,0 +1,19 @@
+{
+  "name": "bookingvaccinemini",
+  "version": "1.0.0",
+  "description": "预约疫苗小程序",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/jason_com/booking_vaccine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.9",
+    "jquery": "^3.6.0"
+  }
+}

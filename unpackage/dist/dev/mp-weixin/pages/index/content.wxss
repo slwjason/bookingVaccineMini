@@ -159,8 +159,18 @@ page {
   padding-left: 25px;
   font-size: 12px;
 }
+.card2_top {
+  display: inline-block;
+  width: 50%;
+}
+.card2_bottom {
+  display: inline-block;
+  width: 50%;
+  height: 127rpx;
+}
 .card2_bottom image {
-  width: 95%;
+  width: 55%;
+  height: 80%;
 }
 .progress {
   padding: 10rpx 0 0 0;
@@ -178,6 +188,9 @@ page {
 }
 .dynamic {
   padding: 0 10rpx;
+}
+.item {
+  border-bottom: 1px solid #ccc;
 }
 .item .time {
   margin: 18rpx 0 12rpx 0;
@@ -202,5 +215,32 @@ page {
 .news_from {
   padding: 20rpx 18rpx;
   font-size: 27rpx;
+}
+.item {
+  width: 100%;
+  margin: 10px;
+}
+.fgray_time {
+  color: #00BFFF;
+  font-size: 10px;
+  text-align: right;
+  margin: 5px;
+}
+.r-img {
+  width: 80%;
+}
+.r-img .left_img {
+  display: block;
+  width: 80%;
+}
+.r-info {
+  margin: 10px;
+  color: #154971;
+  font-size: 12px;
+}
+.more {
+  font-size: 12px;
+  color: #838383;
+  text-align: right;
 }
 

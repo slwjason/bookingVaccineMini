@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "当前记录",
+  "onReachBottomDistance": 100,
+  "usingComponents": {
+    "tabs": "/components/tabs/tabs"
+  }
+}

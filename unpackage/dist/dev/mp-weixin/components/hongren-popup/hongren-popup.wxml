@@ -1,0 +1,16 @@
+<wxs module="fun">
+function rgb(a){//rgb颜色随机
+	if(!a){
+		a=0.5;
+	}
+	var r = Math.floor(Math.random()*256);
+	var g = Math.floor(Math.random()*256);
+	var b = Math.floor(Math.random()*256);
+	var rgb = 'rgba('+r+','+g+','+b+','+a+')';
+	return rgb;
+}
+module.exports = {
+	rgb:rgb
+}
+</wxs>
+<view style="z-index:100;" class="data-v-f760e78c"><view class="{{['data-v-f760e78c',(type?'fever_popupShow':'fever_popupHide')+' fever_popup fever_flex']}}" id="fever_popup"><block wx:if="{{type}}"><view data-event-opts="{{[['tap',[['popupClose',['$event']]]]]}}" class="'fever_popup_mark' data-v-f760e78c" style="{{('opacity: '+(mark?0.3:0)+';')}}" catchtap="__e"></view></block><block wx:if="{{type}}"><view class="fever_popup_def fever_flex data-v-f760e78c" style="background-color:#89B1E8;" id="fever_popup_def"><block wx:if="{{info&&info.title&&info.title.length>0}}"><view class="fever_popup_def_header line_clamp1 data-v-f760e78c">{{info.title}}</view></block><block wx:if="{{info&&info.centent&&info.centent.length>0}}"><view class="fever_popup_def_body fever_flex data-v-f760e78c"><block wx:for="{{info.centent}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class="data-v-f760e78c">{{item}}</view></block></view></block><block wx:if="{{checked}}"><view class="fever_popup_checkbox data-v-f760e78c"><checkbox-group data-event-opts="{{[['change',[['checkboxChange',['$event']]]]]}}" bindchange="__e" class="data-v-f760e78c"><label class="data-v-f760e78c"><checkbox style="transform:scale(0.7);" checked="{{checked.state}}" color="{{fun.rgb(0.8)}}" class="data-v-f760e78c"></checkbox><text class="data-v-f760e78c">我已仔细阅读品牌的隐私政策及法律条款，点击【授权登录】即代表您已阅读并接受前述条款</text></label></checkbox-group></view></block><block wx:if="{{info&&info.btn.length>0}}"><view class="fever_popup_def_footer data-v-f760e78c"><block wx:for="{{info.btn}}" wx:for-item="item" wx:for-index="index" wx:key="index"><block class="data-v-f760e78c"><block wx:if="{{item==1||item=='取消'||item=='关闭'}}"><view data-event-opts="{{[['tap',[['onBtn',['$0'],[[['info.btn','',index]]]]]]]}}" class="fever_popup_def_footer_item fever_cancel data-v-f760e78c" bindtap="__e">取消</view></block><block wx:else><block wx:if="{{item==2||item=='确认'}}"><view data-event-opts="{{[['tap',[['onBtn',['$0'],[[['info.btn','',index]]]]]]]}}" class="fever_popup_def_footer_item fever_confirm data-v-f760e78c" bindtap="__e">确认</view></block><block wx:else><block wx:if="{{item==3||item=='分享'}}"><view data-event-opts="{{[['tap',[['onBtn',['$0'],[[['info.btn','',index]]]]]]]}}" class="fever_popup_def_footer_item fever_share data-v-f760e78c" bindtap="__e">分享</view></block><block wx:else><block wx:if="{{item==4||item=='收藏'}}"><view data-event-opts="{{[['tap',[['onBtn',['$0'],[[['info.btn','',index]]]]]]]}}" class="fever_popup_def_footer_item fever_collection data-v-f760e78c" bindtap="__e">收藏</view></block><block wx:else><view data-event-opts="{{[['tap',[['onBtn',['$0'],[[['info.btn','',index]]]]]]]}}" class="fever_popup_def_footer_item fever_other data-v-f760e78c" bindtap="__e">{{item}}</view></block></block></block></block></block></block></view></block></view></block></view></view>

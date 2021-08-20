@@ -1,3 +1,5 @@
 {
+  "navigationBarTitleText": "附件接种点",
+  "enablePullDownRefresh": false,
   "usingComponents": {}
 }

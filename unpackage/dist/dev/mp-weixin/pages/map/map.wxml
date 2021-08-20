@@ -1,1 +1,1 @@
-<view><map class="vue-ref" id="map1" data-ref="map1"></map></view>
+<view><view class="map_container"><map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map></view></view>

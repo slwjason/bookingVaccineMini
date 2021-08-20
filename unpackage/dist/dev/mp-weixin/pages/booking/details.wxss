@@ -25,7 +25,7 @@
 /* 透明度 */
 /* 文章场景相关 */
 page {
-  background: #C0C0C0;
+  background-color: #F5F6FA;
 }
 .header {
   width: 100%;
@@ -55,7 +55,7 @@ page {
   width: 40rpx;
   text-align: center;
   display: inline-block;
-  background: #007AFF;
+  color: #00557f;
   margin: 0px 10px;
   font-size: 14px;
 }
@@ -78,7 +78,7 @@ page {
   position: fixed;
   bottom: 0px;
   width: 100%;
-  height: 100rpx;
+  height: 75rpx;
   background: #fff;
   -webkit-box-align: center;
   -webkit-align-items: center;

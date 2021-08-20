@@ -24,6 +24,16 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+.selectAddress {
+  border: 1px #567f98 solid;
+  width: 200rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  position: relative;
+  padding: 5rpx;
+  top: 50rpx;
+  color: #567f98;
+}
 .header {
   width: 750rpx;
   height: 300rpx;
@@ -70,11 +80,25 @@
 }
 .box {
   width: 500rpx;
-  margin: 20px auto;
+  margin: -15px 0rpx 10rpx 235rpx;
   height: 100rpx;
   background: #007AFF;
   text-align: center;
   line-height: 100rpx;
+  border-radius: 20px;
+}
+.container {
+  position: relative;
+  right: -83px;
+  top: -13px;
+  width: 0px;
+  /*  宽高设置为0，很重要，否则达不到效果 */
+  height: 0px;
+  border: 6px solid #567f98;
+  border-bottom-color: transparent;
+  /* 设置透明背景色 */
+  border-left-color: transparent;
+  border-right-color: transparent;
 }
 .item {
   display: -webkit-box;

@@ -24,6 +24,9 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+page {
+  background-color: #F5F6FA;
+}
 .header {
   background: #fff;
   width: 100%;
@@ -55,6 +58,7 @@
   background: #fff;
   width: 100%;
   padding: 10px;
+  height: 700rpx;
   margin-top: 40rpx;
 }
 .main_header {
@@ -105,7 +109,7 @@
 }
 .footer {
   background: #fff;
-  height: 50rpx;
+  height: 75rpx;
   position: fixed;
   bottom: 0;
   width: 100%;

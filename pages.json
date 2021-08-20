@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "新冠肺炎疫苗",
+				"navigationBarTitleText": "疫苗通",
 				"onReachBottomDistance":100
 			}
 		},
@@ -12,32 +12,97 @@
 			
 		},
 		{
-			"path": "pages/vaccina/vaccina"
+			"path": "pages/vaccina/vaccina",
+			"style": {
+				"navigationBarTitleText": "附件接种点",
+				"onReachBottomDistance":100
+			}
 			
 		},
 		{
-			"path": "pages/map/map"
+			"path": "pages/map/map",
+			"style": {
+				"navigationBarTitleText": "附件接种点",
+				"enablePullDownRefresh" : false 
+			}
+			
 			
 		},
 		{
-			"path": "pages/booking/booking"
+			"path": "pages/goNews/goNews"
+			
+		},
+		{
+			"path": "pages/booking/booking",
+			"style": {
+				"navigationBarTitleText": "档案绑定",
+				"onReachBottomDistance":100
+			}
+			
+		},
+		{
+			"path": "pages/booking/unit",
+			"style": {
+				"navigationBarTitleText": "选择接种点",
+				"onReachBottomDistance":100
+			}
 		
 		},
 		{
-			"path": "pages/booking/unit"
+			"path": "pages/booking/archives",
+			"style": {
+				"navigationBarTitleText": "档案填写",
+				"onReachBottomDistance":100
+			}
 		
 		},
 		{
-			"path": "pages/booking/archives"
+			"path": "pages/booking/archivesFormal",
+			"style": {
+				"navigationBarTitleText": "正式档案填写",
+				"onReachBottomDistance":100
+			}
 		
 		},
 		{
-			"path": "pages/booking/details"
+			"path": "pages/booking/details",
+			"style": {
+				"navigationBarTitleText": "个人质料",
+				"onReachBottomDistance":100
+			}
 		
 		},
 		{
-			"path": "pages/booking/bookingSubmit"
-		
+			"path": "pages/booking/bookingSubmit",
+			"style": {
+				"navigationBarTitleText": "选择疫苗",
+				"onReachBottomDistance":100
+			}
+			
+		},
+		{
+			"path": "pages/record/recordDetails",
+			"style": {
+				"navigationBarTitleText": "记录详情",
+				"onReachBottomDistance":100
+			}
+			
+		},
+		{
+			"path": "pages/notice/notice",
+			"style": {
+				"navigationBarTitleText": "预约记录",
+				"onReachBottomDistance":100
+			}
+			
+		},
+		{
+			"path": "pages/record/record",
+			"style": {
+				"navigationBarTitleText": "当前记录",
+				"onReachBottomDistance":100
+			}
+			
 		},
 		{
 		   "path": "pages/question/question",
@@ -77,8 +142,8 @@
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "新冠肺炎疫苗",
-		"navigationBarBackgroundColor": "#F8F8F8"
-		
+		"navigationBarTitleText": "疫苗通",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"enablePullDownRefresh" : true 
 	}
 }

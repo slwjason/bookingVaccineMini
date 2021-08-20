@@ -4,11 +4,16 @@
     "pages/index/content",
     "pages/vaccina/vaccina",
     "pages/map/map",
+    "pages/goNews/goNews",
     "pages/booking/booking",
     "pages/booking/unit",
     "pages/booking/archives",
+    "pages/booking/archivesFormal",
     "pages/booking/details",
     "pages/booking/bookingSubmit",
+    "pages/record/recordDetails",
+    "pages/notice/notice",
+    "pages/record/record",
     "pages/question/question",
     "pages/question/question1",
     "pages/question/question2",
@@ -20,8 +25,10 @@
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "新冠肺炎疫苗",
-    "navigationBarBackgroundColor": "#F8F8F8"
+    "navigationBarTitleText": "疫苗通",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "enablePullDownRefresh": true
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

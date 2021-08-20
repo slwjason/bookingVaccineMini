@@ -1,8 +1,11 @@
 {
+  "navigationBarTitleText": "附件接种点",
+  "onReachBottomDistance": 100,
   "usingComponents": {
     "uni-search-bar": "/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar",
     "uni-icons": "/uni_modules/uni-icons/components/uni-icons/uni-icons",
     "uni-badge": "/uni_modules/uni-badge/components/uni-badge/uni-badge",
+    "address-picker": "/components/lingdang-AddressPicker/AddressPicker",
     "m-search": "/components/mehaotian-search/mehaotian-search"
   }
 }

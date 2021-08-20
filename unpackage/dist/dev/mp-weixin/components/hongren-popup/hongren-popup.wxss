@@ -1,0 +1,269 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* fever_popup_def */
+.fever_popup_def_footer_item.data-v-f760e78c {
+	position: relative;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	padding: 5rpx 20rpx;
+	border-left: 1rpx dashed #e7e7e7;
+}
+.fever_popup_def_footer_item.data-v-f760e78c:nth-child(1) {
+	border: 0;
+}
+.fever_popup_def_footer.data-v-f760e78c {
+	position: relative;
+	width: 100%;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-justify-content: space-around;
+	        justify-content: space-around;
+	-webkit-flex-wrap: nowrap;
+	        flex-wrap: nowrap;
+	padding: 10px 0;
+	font-size: 34rpx;
+}
+.fever_popup_checkbox.data-v-f760e78c{
+	position: relative;
+	width: 100%;
+	font-size: 30rpx;
+	font-weight: 300;
+	padding: 5rpx 15rpx;
+	text-align: left;
+}
+.fever_popup_def_body>view.data-v-f760e78c {
+	width: 100%;
+	padding: 5rpx;
+	text-indent: 1em;
+}
+.fever_popup_def_body.data-v-f760e78c {
+	position: relative;
+	min-height: 100rpx;
+	max-height: 300rpx;
+	overflow-y: auto;
+	width: 100%;
+	font-size: 30rpx;
+	font-weight: 300;
+	padding: 5rpx 15rpx;
+	text-align: left;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.fever_popup_def_header.data-v-f760e78c {
+	position: relative;
+	font-weight: bold;
+	padding: 15rpx;
+	width: 100%;
+	font-size: 40rpx;
+}
+.fever_popup_def.data-v-f760e78c {
+	position: absolute;
+	width: 500rpx;
+	min-height: 200rpx;
+	background-color: #ff986f;
+	border-radius: 20rpx;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+	padding: 10rpx 10rpx 0 10rpx;
+	color: #ffffff;
+	z-index: 100;
+}
+/*  */
+.fever_popup_mark.data-v-f760e78c {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #000000;
+	opacity: .3;
+	z-index: 99;
+}
+.fever_popup.data-v-f760e78c {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+	font-size: 40rpx;
+	-webkit-transition: all 1s;
+	transition: all 1s;
+	overflow: hidden;
+	z-index: 98;
+}
+.fever_popupShow.data-v-f760e78c {
+	-webkit-transform: scale(1);
+	        transform: scale(1);
+	opacity: 1;
+	/* border-radius: 0rpx; */
+}
+.fever_popupHide.data-v-f760e78c {
+	-webkit-transform: scale(0);
+	        transform: scale(0);
+	opacity: 0;
+	/* border-radius: 100vw; */
+}
+.fever_flex.data-v-f760e78c {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+}
+.fever_cancel.data-v-f760e78c {
+	color: #767676;
+}
+.fever_confirm.data-v-f760e78c {
+	color: #d8c4ff;
+}
+.fever_share.data-v-f760e78c {
+	color: #55aaff;
+}
+.fever_other.data-v-f760e78c{
+	color: #5e585b;
+}
+.fever_collection.data-v-f760e78c{
+	color: #ffaa00;
+}
+

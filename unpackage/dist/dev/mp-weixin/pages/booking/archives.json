@@ -1,4 +1,6 @@
 {
+  "navigationBarTitleText": "档案填写",
+  "onReachBottomDistance": 100,
   "usingComponents": {
     "uni-forms": "/uni_modules/uni-forms/components/uni-forms/uni-forms",
     "uni-group": "/components/uni-group/uni-group",
